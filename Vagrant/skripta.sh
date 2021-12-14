@@ -12,6 +12,6 @@ apt-get install gns3-gui gns3-server  -y
 
 echo "installing gnome"
 apt-get install gnome -y
-echo"finished downloading"
-echo"REBOOTING"
+echo "finished downloading"
+echo "REBOOTING"
 reboot
