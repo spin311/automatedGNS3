@@ -17,4 +17,3 @@ echo "finished downloading"
 echo"username: vagrant"
 echo"password: vagrant"
 echo "REBOOTING"
-reboot
