@@ -11,7 +11,7 @@ apt-get install -y xfce4 virtualbox-guest-dkms virtualbox-guest-utils virtualbox
 
 echo "installing gns3"
 add-apt-repository ppa:gns3/ppa -y
-apt-get install gns3-gui gns3-server  -y
+apt-get install gns3-gui=2.2.27 gns3-server=2.2.27  -y
 
 echo "installing firefox"
 apt-get install firefox -y
