@@ -19,6 +19,6 @@ apt-get install firefox -y
 echo "installing vncserver"
 apt-get install tightvncserver -y
 
-echo "finished downloading, log in and then reboot"
-echo"username: vagrant"
-echo"password: vagrant"
+echo "finished downloading, login and then reboot"
+echo "username: vagrant"
+echo "password: vagrant"
