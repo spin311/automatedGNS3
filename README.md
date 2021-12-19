@@ -6,7 +6,6 @@ Deployment and usage of GNS3 using a Virtual Machine.
 2. Open Vagrant folder in terminal
 ```Shell
 cd automatedGNS3/Vagrant
-vagrant up
 ```
 3. type in terminal:
 ```Shell 
@@ -60,7 +59,7 @@ To make it work i had to export debian frontend and set it to uninteractive, dow
 
 
 ###### **Other applications:**
-For web browser I used firefox as it is the best web browser.
+For web browser I used firefox as it is the best web browser. :fox_face: :1st_place_medal:
 
 For VNC i used tightvncserver as I had trouble getting guacamole to work.
 
