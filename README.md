@@ -40,7 +40,7 @@ Specifying GNS3-gui and GNS3 server version (2.2.27) caused error on launch beca
 
 
 # Solution and Software
-![Solution](.\Screenshots\Solution.png?raw=true "Solution")
+![Solution](Screenshots/Solution.png?raw=true "Solution")
 
 
 ###### **Ubuntu:**
@@ -48,12 +48,12 @@ At first I used ubuntu/xenial64 (16.0) version, but later on i switched to focal
 
 
 ###### **Desktop-GUI:**
-![Desktop-GUI](.\Screenshots\Desktop-GUI.png?raw=true "Desktop-GUI")
+![Desktop-GUI](Screenshots/Desktop-GUI.png?raw=true "Desktop-GUI")
 For desktop environment i first used gnome, but later on switched to xfce4 as it is more lightweight. If I had more time i would probably try to fing an even more lightweight solution for this, as most loadtime is taken by loading xfce4 and all its extensions and programs.
 I tried giving xfce4 ``` --no-install-recommends --no-install-suggests ``` flag, but that caused the VirtualMachine to crash during the deployment.
 
 ###### **GNS3:**
-![GNS3](.\Screenshots\GNS3-wireshark.png?raw=true "GNS3")
+![GNS3](Screenshots/GNS3-wireshark.png?raw=true "GNS3")
 GNS3-gui and GNS3 server are downloaded uninteractivly, using apt-get (latest version) as downloading specific version proved to be a headache.
 To make it work i had to export debian frontend and set it to uninteractive, download GNS3 repo and then install with -y flag enabled.
 
