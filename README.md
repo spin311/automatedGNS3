@@ -33,6 +33,11 @@ and then
 vagrant up 
 ```
 
+###### Connect with VNC:
+Install VNCclient (I recommend VNC Viewer)
+connect to port 5900
+password: vagrant (can be changed in skripta.sh in line 24)
+
 ## Problems encountered thru the project
 
 The biggest challenge was learning the Vagrantfile (ruby) syntax and debugging the problems. I had problems setting up desktop environment and also finding a solution for GNS3 ubridge and innitian install. GNS3 had to download uninteractivly, which showed to be a bigger challenge than i enticipated.

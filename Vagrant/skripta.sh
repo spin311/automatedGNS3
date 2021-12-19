@@ -21,6 +21,25 @@ apt-get install tightvncserver -y
 
 usermod -aG ubridge vagrant
 ufw allow 5900
+x11vnc -storepasswd vagrant /home/vagrant/.vnc/passwd
+
+cat <<EOF > /etc/systemd/system/x11vnc.service
+[Unit]
+Description=Start x11vnc at startup
+After=multi-user.target
+
+[Service]
+User=vagrant
+Group=vagrant
+Type=simple
+ExecStart=/usr/bin/x11vnc -forever -loop -noxdamage -repeat -rfbauth /home/vagrant/.vnc/passwd -rfbport 5900 -shared
+
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
+EOF
+
 echo "finished downloading, login and then reboot"
 echo "username: vagrant"
 echo "password: vagrant"

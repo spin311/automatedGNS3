@@ -1,0 +1,37 @@
+package_update: true
+package_upgrade: true
+
+packages:
+ - xfce4
+ - gns3-gui
+ - gns3-server
+ - firefox
+ - tightvncserver
+
+ bootcmd:
+  - sed -i 's/allowed_users=.*$/allowed_users=anybody/' /etc/X11/Xwrapper.config
+
+write_files:
+
+  - content: |
+    [Unit]
+    Description=Start x11vnc at startup
+    After=multi-user.target
+    [Service]
+    User=vagrant
+    Group=vagrant
+    Type=simple
+    ExecStart=/usr/bin/x11vnc -forever -loop -noxdamage -repeat -rfbauth /home/vagrant/.vnc/passwd -rfbport 5900 -shared
+    Restart=on-failure
+    [Install]
+    WantedBy=multi-user.target
+  path: /etc/systemd/system/x11vnc.service
+  
+
+runcmd:
+- ufw allow 5900
+- x11vnc -storepasswd vagrant /home/vagrant/.vnc/passwd
+- usermod -aG ubridge vagrant
+
+
+ final_message: "The system is up, after $UPTIME seconds"
